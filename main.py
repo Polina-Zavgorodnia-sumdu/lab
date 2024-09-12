@@ -20,5 +20,32 @@ print("\nСписок речень у тексті:")
 for sentence in sentences:
     print(f"- {sentence}")
     
-# 4, 5, 6 функції зробив (наступний має вставити сюди свою частину і вписати своє ім*я)
+# 4,5,6 функції зробив Шмат Олександр
+
+# 4. Підрахунок кількості речень у тексті
+import re
+
+def count_sentences(text):
+    sentences = re.split(r'[.!?]+', text)
+    sentences = [s for s in sentences if s.strip()]
+
+    return len(sentences)
+print(f"\n4. Кількість речень у тексті: {count_sentences(text)}")
+
+# 5. Підрахунок кількості слів у тексті
+def count_words(text):
+    words = text.split()
+    return len(words)
+word_count = count_words(text)
+print(f"\n5. Кількість слів у тексті: {word_count}")
+
+# 6. Пошук найдовшого слова у тексті
+def find_longest_word(text):
+    words = text.split()
+    longest_word = max(words, key=len)  # Знаходимо найдовше слово
+    return longest_word
+
+longest_word = find_longest_word(text)
+print(f"\n6. Найдовше слово у тексті: {longest_word}")
+
 # 7, 8, 9 функції зробив (наступний має вставити сюди свою частину і вписати своє ім*я)
