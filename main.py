@@ -42,7 +42,7 @@ print(f"\n5. Кількість слів у тексті: {word_count}")
 # 6. Пошук найдовшого слова у тексті
 def find_longest_word(text):
     words = text.split()
-    longest_word = max(words, key=len)  # Знаходимо найдовше слово
+    longest_word = max(words, key=len)
     return longest_word
 
 longest_word = find_longest_word(text)
